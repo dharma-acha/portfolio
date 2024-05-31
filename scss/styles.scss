@@ -1047,6 +1047,41 @@ footer {
         text-align: center;
     }
 
+    #experience-timeline {
+        margin: 30px auto 0 auto;
+        position: relative;
+        max-width: 1000px;
+        max-height: 500px;
+        /* Adjust the height based on your needs */
+        overflow-y: auto;
+        /* Enables vertical scrolling */
+        padding-right: 10px;
+    
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            bottom: 0;
+            left: 23px;
+            right: auto;
+            height: 240%;
+            width: 3px;
+            background: $base-color;
+            z-index: 0;
+        }
+    
+        &:after {
+            position: absolute;
+            content: '';
+            width: 3px;
+            height: 40px;
+            background: $base-color;
+            background: linear-gradient(to bottom, $base-color, rgba($base-color, 0));
+            top: 100%;
+            left: 23px;
+        }
+    }
+
 }
 
 // Extra Small Devices
